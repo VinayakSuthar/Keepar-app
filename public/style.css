@@ -22,8 +22,10 @@ header {
 
 form.create-note {
   width: 480px;
-  margin: 10px auto 30px auto;
-  border: 2px solid #999;
+  margin: 20px auto 30px auto;
+  padding: 20px;
+  border-radius: 9px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 
 form.create-note input,
@@ -33,6 +35,17 @@ form.create-note textarea {
   outline: none;
   resize: none;
   font-family: inherit;
+  font-size: 1.2rem;
+}
+
+form.create-note button {
+  float: right;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  color: #ffbb00;
+  cursor: pointer;
 }
 
 footer {

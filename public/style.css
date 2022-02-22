@@ -48,8 +48,41 @@ form.create-note button {
   cursor: pointer;
 }
 
+.note {
+  box-shadow: 0 2px 5px #ccc;
+  width: 240px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  float: left;
+}
+
+.note h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.note p {
+  font-size: 1.1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 5px ;
+}
+
+.note button {
+  float: right;
+  border: none;
+  outline: none;
+  background: #ffbb00;
+  color: #fff;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+}
+
 footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;

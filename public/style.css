@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-* {
+*,*::before,*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: Roboto;
+  box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
+
+/* #root {
+  position: relative;
+} */
 
 header {
   background-color: #ffbb00;
@@ -21,9 +27,10 @@ header {
 }
 
 form.create-note {
-  width: 480px;
+  position: relative;
+  max-width: 480px;
   margin: 20px auto 30px auto;
-  padding: 20px;
+  padding: 10px;
   border-radius: 9px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
@@ -36,16 +43,26 @@ form.create-note textarea {
   resize: none;
   font-family: inherit;
   font-size: 1.2rem;
+  padding: 4px;
 }
 
 form.create-note button {
   float: right;
   border: none;
-  background: none;
+  background: #ffbb00;
   outline: none;
-  font-size: 1rem;
-  color: #ffbb00;
+  color: #fff;
   cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+}
+
+form.create-note button:hover {
+  background-color: #ccc;
 }
 
 .note {
@@ -74,15 +91,15 @@ form.create-note button {
   float: right;
   border: none;
   outline: none;
-  background: #ffbb00;
-  color: #fff;
+  background: none;
+  color: #ffbb00;
   cursor: pointer;
   width: 36px;
   height: 36px;
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -90,4 +107,15 @@ footer {
 
 footer p {
   color: #888;
+}
+
+@media screen and (max-width: 640px) {
+  form.create-note {
+    margin: 20px 15px 30px;
+    max-width: 100%;
+  }
+  .note {
+    width: 93%;
+    margin: 15px;
+  }
 }

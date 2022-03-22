@@ -5,5 +5,5 @@ export default function Header() {
     <header>
       <h1>Keepar</h1>
     </header>
-  )
+  );
 }

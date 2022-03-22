@@ -16,13 +16,13 @@ export default function App() {
   function deleteNotes(id) {
     setNotes(prevNote=> {
       return prevNote.filter((noteItem, index)=> {
-        return index!=id
+        return index!==id
       });
     });
   }
 
   return (
-    <div>
+    <>
       <Header/>
       <CreateArea onAdd={AddNotes}/>
       {notes.map((noteItem,index) => {
@@ -36,6 +36,6 @@ export default function App() {
         />);
       })}
       <Footer/>
-    </div>
+    </>
   )
 }
